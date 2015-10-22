@@ -1,0 +1,89 @@
+<div id="podcast_show">
+    <div id="show_banner">
+      <div class="wrapper_skinny">
+          <h1><%= @podcast.title %></h1>
+          <p class="description"><%= @podcast.description %></p>
+          <% unless @podcast.itunes.blank? %>
+            <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+          <% end %>
+          <% unless @podcast.podbay.blank? %>
+            <a href="<%= @podcast.podbay %>" class="subscribe_link">Podbay</a>
+          <% end %>
+          <% unless @podcast.soundcloud.blank? %>
+            <a href="<%= @podcast.soundcloud %>" class="subscribe_link">Soundcloud</a>
+          <% end %>
+        </div>
+    </div>
+
+    <div id="breadcrumb">
+      <%= link_to podcasts_path do %>
+        All Podcasts
+        <span>/</span>
+        Maroon 5 Podcast
+      <% end %>
+    </div>
+
+    <div id="episodes">
+      <div class="wrapper_skinny">
+        <ul class="cf">
+          <li class="cf">
+            <div class="episode_thumbnail">
+              <a href="episode.html">
+                <img src="images/thumb1.jpg" alt="">
+              </a>
+            </div>
+            <div class="episode_overview">
+              <h2><a href="episode.html">Member list of Maroon 5, an American pop rock band from Los Angeles, California.</a></h2>
+              <p class="description">The group originally formed in 1994 as Kara's Flowers with a line-up of Adam Levine, Jesse Carmichael, Mickey Madden and Ryan Dusick.
+              In 2001, guitarist James Valentine joined and the band changed the name to Maroon 5.</p>
+            </div>
+          </li>
+
+          <li class="cf">
+            <div class="episode_thumbnail">
+              <a href="episode.html">
+                <img src="images/thumb1.jpg" alt="">
+              </a>
+            </div>
+            <div class="episode_overview">
+              <h2><a href="episode.html">Member list of Maroon 5, an American pop rock band from Los Angeles, California.</a></h2>
+              <p class="description">The group originally formed in 1994 as Kara's Flowers with a line-up of Adam Levine, Jesse Carmichael, Mickey Madden and Ryan Dusick.
+              In 2001, guitarist James Valentine joined and the band changed the name to Maroon 5.</p>
+            </div>
+          </li>
+
+          <li class="cf">
+            <div class="episode_thumbnail">
+              <a href="episode.html">
+                <img src="images/thumb1.jpg" alt="">
+              </a>
+            </div>
+            <div class="episode_overview">
+              <h2><a href="episode.html">Member list of Maroon 5, an American pop rock band from Los Angeles, California.</a></h2>
+              <p class="description">The group originally formed in 1994 as Kara's Flowers with a line-up of Adam Levine, Jesse Carmichael, Mickey Madden and Ryan Dusick.
+              In 2001, guitarist James Valentine joined and the band changed the name to Maroon 5.</p>
+            </div>
+          </li>
+
+          <li class="cf">
+            <div class="episode_thumbnail">
+              <a href="episode.html">
+                <img src="images/thumb1.jpg" alt="">
+              </a>
+            </div>
+            <div class="episode_overview">
+              <h2><a href="episode.html">Member list of Maroon 5, an American pop rock band from Los Angeles, California.</a></h2>
+              <p class="description">The group originally formed in 1994 as Kara's Flowers with a line-up of Adam Levine, Jesse Carmichael, Mickey Madden and Ryan Dusick.
+              In 2001, guitarist James Valentine joined and the band changed the name to Maroon 5.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="pagination">
+    <span class="previous_page disabled">Previous</span>
+    <em class="current">1</em>
+    <a href="#">2</a>
+    <a href="#" class="next_page">Next</a>
+  </div>
