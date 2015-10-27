@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'paperclip', '~> 4.3', '>= 4.3.1'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
+gem 'youtube-dl.rb'
 
 group :development, :test do
   gem 'byebug'
