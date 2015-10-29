@@ -37,6 +37,27 @@ class EpisodesController < ApplicationController
     redirect_to root_path
   end
 
+  def youtube_upload
+    video = YoutubeDL::Video.new(params[:url], output: Rails.root.join('public', 'uploads', '%(id)s.%(ext)s').to_s, extract_audio: true, audio_format: 'mp3')
+
+    video.download
+
+    public_filename = video.filename[Regexp.new("#{Rails.root.join('public').to_s}(.*)"), 1]
+
+    render text: public_filename
+  end
+
+  def file_upload
+    uploaded_io = params[:mp3]
+    filename = Rails.root.join('public', 'uploads', uploaded_io.original_filename)
+
+    File.open(filename, 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+
+    render text: filename
+  end
+
   private
 
   def episode_params

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :podcasts
 
-   resources :podcasts, only: [:index, :show] do
+    resources :podcasts do
     resources :episodes
+      post '/episodes/youtube_upload' => 'episodes#youtube_upload'
+      post '/episodes/file_upload' => 'episodes#file_upload'
    end
 
    authenticated :podcast do
