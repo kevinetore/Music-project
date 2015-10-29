@@ -3,6 +3,7 @@ class EpisodesController < ApplicationController
   before_filter :require_permission
   before_action :find_podcast
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
+  before_action :set_episode, only: [:show, :edit, :update, :destroy]
 
   def new
     @episode = @podcast.episodes.new
