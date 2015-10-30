@@ -1,5 +1,10 @@
 <%= form_for ([@podcast, @episode]) do |f| %>
 
+<!--
+  TODO: Add validation error messages
+  See http://guides.rubyonrails.org/active_record_validations.html#working-with-validation-errors
+-->
+
 <div class="field">
   <%= f.label :title %><br>
   <%= f.text_field :title %>
