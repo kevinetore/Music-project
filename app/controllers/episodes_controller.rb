@@ -37,15 +37,16 @@ class EpisodesController < ApplicationController
     @episode.destroy
     redirect_to root_path
   end
-  
+
   private
 
+  # This is a duplicate of find_episode
   def set_episode
       @episode = Episode.find(params[:id])
   end
 
   def episode_params
-    params.require(:episode).permit(:title, :description, :episode_thumbnail, :mp3, :filename)
+    params.require(:episode).permit(:title, :description, :episode_thumbnail, :mp3, :filename, :youtube_url)
   end
 
   def find_podcast
