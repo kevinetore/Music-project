@@ -31,6 +31,7 @@
       <h2><%= @episode.title %></h2>
       <p class="description"><%= @episode.description %></p>
 
+      <% if @episode.mp3.url %>
       <div id="jquery_jplayer_1" class="jp-jplayer"></div>
       <div id="jp_container_1" class="jp-audio">
         <div class="jp-type-single">
@@ -63,6 +64,10 @@
           </div>
         </div>
       </div>
+      <% else %>
+      <!-- TODO: Apply styling and make better -->
+      Still Proccessing... Check back later.
+      <% end %>
 
     </div>
   </div>

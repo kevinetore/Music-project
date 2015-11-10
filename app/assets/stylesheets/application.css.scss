@@ -135,6 +135,20 @@ body {
     background-image: image-url("banner_podcast3.jpg");
 }
 
+#new_mp3_banner {
+  background-image: image-url("banner_form.jpg");
+  padding:20px;
+  width: 100%;
+    strong {
+    color: $white;
+    letter-spacing: .7px;
+    font-weight: 300;
+    }
+    .field {
+    opacity: .85;
+    }
+}
+
 .pagination:before, .pagination:after {
   content: " ";
   display: table;
@@ -199,6 +213,10 @@ textarea {
   padding: 0 0 5rem 0;
 }
 
+
+
 @import 'normalize';
 @import 'welcome';
 @import 'podcasts';
+@import "font-awesome-sprockets";
+@import "font-awesome";

@@ -1,5 +1,10 @@
 <%= form_for ([@podcast, @episode]) do |f| %>
 
+<!--
+  TODO: Add validation error messages
+  See http://guides.rubyonrails.org/active_record_validations.html#working-with-validation-errors
+-->
+
 <div class="field">
   <%= f.label :title %><br>
   <%= f.text_field :title %>
@@ -16,9 +21,22 @@
 </div>
 
 <div class="field">
-  <%= f.label :mp3 %><br>
+  <%= f.label :mp3_file_or_add_youtube_link_below %><br>
   <%= f.file_field :mp3 %>
 </div>
 
-<%= f.submit class: "button button_block button button_highlight" %>
+<div id="new_mp3_banner">
+    <div class="wrapper_skinny">
+      <strong>Or... copy the link of any website and get the .MP3 as return!</strong>
+      <div class="field">
+        <%= f.text_field :youtube_url , placeholder: "Paste the URL here.."%>
+      </div>
+      </div>
+</div>
+<br>
+
+<!-- TODO: Styling -->
+
+
+<%= f.button class: "button button_block button button_highlight", data: {disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Creating episode, hold on.."} %>
 <% end %>

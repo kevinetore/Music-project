@@ -12,6 +12,8 @@ gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'paperclip', '~> 4.3', '>= 4.3.1'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'youtube-dl.rb'
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'byebug'
