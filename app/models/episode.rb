@@ -7,8 +7,6 @@ class Episode < ActiveRecord::Base
   has_attached_file :mp3
   validates_attachment :mp3, content_type: { content_type: ["audio/mpeg", "audio/mp3"] }
 
-  # Hook into write_attribute to check if any YouTube proccessing needs to be done
-  # TODO: Find a better way to do this
   def write_attribute(attr_name, value)
     check_for_youtube_proccessing(read_attribute(attr_name), value) if attr_name.intern == :youtube_url
     super
