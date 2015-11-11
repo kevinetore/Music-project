@@ -16,9 +16,10 @@
 </div>
 
 <div class="field">
-  <%= f.label :episode_thumbnail %><br>
-  <%= f.file_field :episode_thumbnail %>
+  <%= f.label :episode_thumbnail, class: 'control-label' %><br>
+  <%= f.file_field :episode_thumbnail, :id => 'input-1', type: "file", class: "file" %>
 </div>
+
 
 <div class="field">
   <%= f.label :mp3_file_or_add_youtube_link_below %><br>
@@ -40,3 +41,4 @@
 
 <%= f.button class: "button button_block button button_highlight", data: {disable_with: "<i class='fa fa-circle-o-notch fa-spin'></i> Creating episode, hold on.."} %>
 <% end %>
+
