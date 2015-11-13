@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
   before_action :authenticate_podcast!, except: [:show]
-  #before_filter :require_permssion - Buggs out the system because i can CRUD every episode.
+  #before_filter :require_permssion
   before_action :find_podcast
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
   before_action :set_episode, only: [:show, :edit, :update, :destroy]
@@ -12,7 +12,7 @@ class EpisodesController < ApplicationController
   def create
     @episode = @podcast.episodes.new episode_params
     if @episode.save
-      redirect_to podcast_episode_path(@podcast, @episode)
+     redirect_to podcast_episode_path(@podcast, @episode)
     else
       render 'new'
     end
