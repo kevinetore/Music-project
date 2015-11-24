@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
-  before_action :authenticate_podcast!, except: [:show]
-  #before_filter :require_permssion - Buggs out the system because i can CRUD every episode.
+  before_action :authenticate_podcast!, except: :show
+  before_filter :require_permission, except: :show
   before_action :find_podcast
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
   before_action :set_episode, only: [:show, :edit, :update, :destroy]
@@ -12,7 +12,8 @@ class EpisodesController < ApplicationController
   def create
     @episode = @podcast.episodes.new episode_params
     if @episode.save
-      redirect_to podcast_episode_path(@podcast, @episode)
+     redirect_to podcast_episode_path(@podcast, @episode),
+     notice: "Succesfully completed downloading the .MP3 with thumbnail image. You can now upload it!"
     else
       render 'new'
     end
@@ -60,7 +61,7 @@ class EpisodesController < ApplicationController
   def require_permission
     @podcast = Podcast.find(params[:podcast_id])
     if current_podcast != @podcast
-      redirect_to :back, notice: "Sorry, you're not allowed to view this page!"
+      redirect_to root_path, notice: "Sorry, you're not allowed to view this page!"
     end
   end
 end
