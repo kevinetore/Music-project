@@ -2,8 +2,8 @@ class EpisodesController < ApplicationController
   before_action :authenticate_podcast!, except: :show
   before_filter :require_permission, except: :show
   before_action :find_podcast
-  before_action :find_episode, only: [:show, :edit, :update, :destroy]
-  before_action :set_episode, only: [:show, :edit, :update, :destroy]
+  before_action :find_episode, only: [:show, :edit, :update, :create, :destroy]
+  before_action :set_episode, only: [:show, :edit, :update, :create, :destroy]
 
   def new
     @episode = @podcast.episodes.new
@@ -43,7 +43,7 @@ class EpisodesController < ApplicationController
 
   # This is a duplicate of find_episode
   def set_episode
-      @episode = Episode.find(params[:id])
+    @episode = Episode.find(params[:id])
   end
 
   def episode_params

@@ -6,8 +6,9 @@ class DownloadVideoJob < ActiveJob::Base
     puts video.filename
 
     # Using Paperclip::FileAdapter
-    # episode = Episode.find(episode_id)
-    # episode.mp3 = File.new(video.filename)
+    #episode = Episode.find(episode_id)
+    #episode.mp3 = File.new(video.filename)
+    #episode.save
 
   end
 
