@@ -14,6 +14,7 @@ gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'youtube-dl.rb'
 gem 'font-awesome-sass'
 gem 'rails_admin', '~> 0.7.0'
+gem 'rubocop', '~> 0.35.1'
 
 group :development, :test do
   gem 'byebug'
