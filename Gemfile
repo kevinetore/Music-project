@@ -16,6 +16,8 @@ gem 'font-awesome-sass'
 gem 'rails_admin', '~> 0.7.0'
 gem 'rubocop', '~> 0.35.1'
 
+
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
