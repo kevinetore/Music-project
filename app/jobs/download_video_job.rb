@@ -14,12 +14,10 @@ class DownloadVideoJob < ActiveJob::Base
 
   def options
     {
-      output: "~/Desktop/%(title)s.mp4",
+      output: "~/Desktop/%(title)s.%(ext)s",
       extract_audio: true,
       audio_format: 'mp3',
       write_thumbnail: true
     }
   end
-
 end
-
