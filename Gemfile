@@ -15,7 +15,7 @@ gem 'youtube-dl.rb'
 gem 'font-awesome-sass'
 gem 'rails_admin', '~> 0.7.0'
 gem 'rubocop', '~> 0.35.1'
-gem "rails-erd"
+
 
 
 group :development, :test do
