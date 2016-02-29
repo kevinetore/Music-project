@@ -124,11 +124,21 @@ body {
 }
 
 .podcasts_banner {
-    background-image: image-url("banner_podcast.jpg");
+    background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3) ), image-url("banner_podcast.jpg");
+    span {
+      color: yellow;
+      font-style: italic;
+      font-weight: 400;
+    }
 }
 
 .sign_in_banner {
-    background-image: image-url("banner_podcast2.jpg");
+    background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3) ), image-url("banner_podcast2.jpg");
+    span {
+      color: yellow;
+      font-style: italic;
+      font-weight: 400;
+    }
 }
 
 .podcast_show_banner {
@@ -136,7 +146,12 @@ body {
 }
 
 .sign_up_banner {
-    background-image: image-url("banner_podcast3.jpg");
+    background-image:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3) ), image-url("banner_podcast3.jpg");
+    span {
+      font-weight: 400;
+      font-style: italic;
+      color: yellow;
+    }
 }
 
 #new_mp3_banner {
