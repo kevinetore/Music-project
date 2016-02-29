@@ -1,5 +1,5 @@
 #background {
-  background-image: url("podcast_background.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3) ), url("podcast_background.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -37,7 +37,36 @@
     margin: 7rem 0 2rem 0;
   }
   .button {
-    margin: 1.5rem 2.5% 0 2.5%;
+    margin: 1.5rem 0.5% 0 0.5%;
   }
 }
 
+.wrapper_skinny {
+  p {
+    color: white;
+    font-style: italic;
+    margin-top: -2%;
+    margin-left: 57%;
+
+  }
+  h1 {
+    span {
+      color: #d2674e;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  p {
+    color: lightgrey;
+    .fa {
+      color: #d2674e;
+    }
+  }
+}
